@@ -1,0 +1,22 @@
+.planet_page_general {
+    padding-left: 15px;
+}
+
+.planet_data {
+    padding-top: 15px;
+}
+
+
+.planet_data_1 {
+    float: left;
+    padding-left: 10px;
+}
+
+.planet_data_2 {
+    float: right;
+    overflow:auto;
+    width:750px;
+}
+
+
+

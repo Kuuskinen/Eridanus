@@ -1,0 +1,359 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Planeedid</title>
+    <link rel="stylesheet" href="/css/general_style.css" th:ref="@{/css/general_style.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" th:text="#{main.name}">Eridanus</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/" th:text="#{index.page}"></a></li>
+            <li><a href="/planets" class="active" th:text="#{planets}"></a></li>
+            <li><a href="/">Page 2</a></li>
+            <li><a href="/">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="planet_page_general">
+    <h2>Planeedid</h2>
+    <div class="planet_data row">
+        <!-- FIRST ROW -->
+        <div class="col-md-6">
+            <img src="../static/img/Mercury_in_color.jpg" alt="planet mercury" width="600"
+                height="600" th:src="@{img/Mercury_in_color.jpg}"/>
+        </div>
+        <!-- 2/2 -->
+        <div class="col-md-6">
+            <h4>Merkuur</h4>
+            <div>
+                Meie Päikesesüsteemi väikseim ja Päikesele lähim planeet on Merkuur Maa Kuust vaid veidi
+                suurem. Merkuuri pinnalt paistaks Päike enam kui kolm korda suurem kui Maalt vaadatuna ja päikesevalgus
+                oleks lausa seitse korda eredam. Merkuur on kiireim planeet, mis teeb tiiru ümber Päikese iga 88 päeva
+                tagant.
+                <br><br>
+                Diameeter: 4880 km
+                <br><br>
+                Ööpäeva pikkus: 176 päeva
+                <br><br>
+                Aasta pikkus: 88 päeva
+                <br><br>
+                Atmosfäär: ei
+                <br><br>
+                Temperatuur: -290 - 430 °C
+                <br><br>
+                Tüüp: kiviplaneet
+                <br><br>
+                Kaaslasi: 0
+                <br><br>
+                Kaugus Päikesest: ~58 000 000 km (0.4 aü)
+                <br><br>
+                Vaadeldav: palja silmaga. OHT! Päikese lähedus.
+                <br><br>
+                Külastanud tehiskaaslasi: 2
+                <br><br>
+                Aktiivseid tehiskaaslasi: 0
+            </div>
+        </div>
+    </div>
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Venus_planet.jpg" alt="planet venus" width="600"
+                 height="600" th:src="@{img/Venus_planet.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Veenus</h4>
+            <div>
+                Suuruse ja ülesehitusega sarnaselt Maale on Veenust nimetatud Maa kaksikuks. Need pole siiski identsed
+                kaksikud - nende kahe maailma vahel on radikaalsed erinevused.
+
+                Veenusel on paks mürgine atmosfäär, mis on täidetud süsinikdioksiidiga, ja see on pidevalt kaetud
+                paksude, kollakate, peamiselt väävelhappe pilvedega. See on meie päikesesüsteemi kuumim planeet, kuigi
+                Merkuur on Päikesele lähemal.
+                <br><br>
+                Diameeter: 12104 km
+                <br><br>
+                Päeva pikkus: 243 päeva
+                <br><br>
+                Aasta pikkus: 225 päeva
+                <br><br>
+                Atmosfäär: 90 atm
+                <br><br>
+                Temperatuur: 471 °C
+                <br><br>
+                Tüüp: kiviplaneet
+                <br><br>
+                Kaaslasi: 0
+                <br><br>
+                Kaugus Päikesest: ~67 000 000 km (0.7 aü)
+                <br><br>
+                Vaadeldav: palja silmaga. OHT! Päikese lähedus.
+                <br><br>
+                Külastanud tehiskaaslasi: 13
+                <br><br>
+                Aktiivseid tehiskaaslasi: 0
+            </div>
+        </div>
+    </div>
+
+    <!-- Earth -->
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/The_Earth_Apollo_17.jpg" alt="home" width="600"
+                 height="600" th:src="@{img/The_Earth_Apollo_17.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Maa</h4>
+            <div>
+                Meie koduplaneet on kolmas planeet Päikesest ja seni ainus teadaolev koht, kus elavad elusolendid. Kui
+                Maa on päikesesüsteemis suuruselt alles viies planeet, on see meie Päikesesüsteemis ainus maailm, mille
+                pinnal on vedel vesi. Vaid veidi suurem kui lähedal asuv Veenus, on Maa neljast Päikesele kõige lähemal
+                asuvast planeedist, mis kõik koosnevad kivist ja metallist.
+                <br><br>
+                Diameeter: 12742 km
+                <br><br>
+                Päeva pikkus: 23.9 h
+                <br><br>
+                Aasta pikkus: 365 päeva
+                <br><br>
+                Atmosfäär: 1 atm
+                <br><br>
+                Temperatuur: ~16 °C
+                <br><br>
+                Tüüp: kiviplaneet
+                <br><br>
+                Kaaslasi: 1
+                <br><br>
+                Kaugus Päikesest: ~150 000 000 km (1 aü)
+                <br><br>
+                Vaadeldav: mis sa ise arvad?
+                <br><br>
+                Külastanud tehiskaaslasi: ~6000
+                <br><br>
+                Aktiivseid tehiskaaslasi: ~2400
+            </div>
+        </div>
+    </div>
+
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Mars_globe.jpg" alt="planet mars" width="600"
+                 height="600" th:src="@{img/Mars_globe.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Marss</h4>
+            <div>
+                Marss on neljas planeet Päikesest - tolmune, külm, kõrbemaailm, millel on väga õhuke atmosfäär. Marss on
+                ka dünaamiline planeet, millel on aastaajad, polaarsed jäämütsid, kanjonid, kustunud vulkaanid ja
+                tõendid selle kohta, et see oli minevikus veelgi aktiivsem.
+
+                Marss on meie Päikesesüsteemi üks enim uuritud kehasid ja see on ainus planeet, kuhu oleme saatnud
+                kulgurid võõrale maastikule ringi liikuma.
+                <br><br>
+                Diameeter: 6780 km
+                <br><br>
+                Päeva pikkus: 24.6 h
+                <br><br>
+                Aasta pikkus: 687 päeva
+                <br><br>
+                Atmosfäär: 0.4435 atm
+                <br><br>
+                Temperatuur: -159 - 20 °C
+                <br><br>
+                Tüüp: kiviplaneet
+                <br><br>
+                Kaaslasi: 2
+                <br><br>
+                Kaugus Päikesest: ~228 000 000 km (1.5 aü)
+                <br><br>
+                Vaadeldav: jah, palja silmaga.
+                <br><br>
+                Külastanud tehiskaaslasi: 20
+                <br><br>
+                Aktiivseid tehiskaaslasi: 8
+            </div>
+        </div>
+    </div>
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Jupiter_shrunken_Spot.jpg" alt="planet jupiter" width="600"
+                 height="600" th:src="@{img/Jupiter_shrunken_Spot.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Jupiter</h4>
+            <div>
+                Viies planeet Päikesest on Jupiter, mis ülekaalukalt suurim päikesesüsteemi planeet - üle kahe korra
+                massiivsem kui kõik teised planeedid kokku.
+
+                Jupiteri tuttavad triibud ja keerised on tegelikult külmad ja tuulised ammoniaagi ning vee pilved, mis
+                hõljuvad vesinikust ja heeliumist atmosfääris. Jupiteri ikooniline Suur Punane Laik on Maast suurem
+                hiigeltorm, mis on möllanud sadu aastaid.
+                <br><br>
+                Diameeter: 142 984 km
+                <br><br>
+                Päeva pikkus: 9.9 h
+                <br><br>
+                Aasta pikkus: 11 aastat
+                <br><br>
+                Atmosfäär: –
+                <br><br>
+                Temperatuur: -110 °C
+                <br><br>
+                Tüüp: gaasiplaneet
+                <br><br>
+                Kaaslasi: 53 (kinnitatud)
+                <br><br>
+                Kaugus Päikesest: ~762 949 141 km (5.1 aü)
+                <br><br>
+                Vaadeldav: jah, palja silmaga.
+                <br><br>
+                Külastanud tehiskaaslasi: 9
+                <br><br>
+                Aktiivseid tehiskaaslasi: 1
+            </div>
+        </div>
+    </div>
+
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Saturn_black_background.png" alt="planet saturn" width="600"
+                 height="600" th:src="@{img/Saturn_black_background.png}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Saturn</h4>
+            <div>
+                Saturn on kuues planeet Päikesest ja suuruselt teine planeet meie Päikesesüsteemis.
+
+                Tuhandete kaunite rõngastega kaunistatud Saturn on planeetide seas ainulaadne. See pole ainus planeet,
+                millel on rõngad - jää- ja kivitükkidest -, kuid ükski pole nii tähelepanuväärne ega nii keeruline kui Saturni oma.
+                <br><br>
+                Diameeter: 116 464 km
+                <br><br>
+                Päeva pikkus: 10.7 päeva
+                <br><br>
+                Aasta pikkus: 29 aastat
+                <br><br>
+                Atmosfäär: –
+                <br><br>
+                Temperatuur: −173.2 - −113.5 °C (ülemistes pilvekihtides)
+                <br><br>
+                Tüüp: gaasiplaneet
+                <br><br>
+                Kaaslasi: 82
+                <br><br>
+                Kaugus Päikesest: ~1 400 000 000 km (9.5 aü)
+                <br><br>
+                Vaadeldav: jah, palja silmaga.
+                <br><br>
+                Külastanud tehiskaaslasi: 4
+                <br><br>
+                Aktiivseid tehiskaaslasi: 0
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Uranus.jpg" alt="planet uranus" width="600"
+                 height="600" th:src="@{img/Uranus.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Uraan</h4>
+            <div>
+                Seitsmes planeet Päikesest on Uraan, mis on meie Päikesesüsteemis läbimõõdult kolmas planeet. Uraan on
+                väga külm ja tuuline. Jäägiganti ümbritseb orbiidi tasapinnast peaaegu 90-kraadise nurga all 13 nõrka
+                rõngast ja 27 väikest kuud. See ainulaadne kalle tekitab Uraani küljel pöörlemise, ning planeet
+                tiirleb ümber Päikese nagu veerev pall.
+
+                Esimese teleskoobi abil leitud planeedi, Uraani, avastas 1781. aastal astronoom William Herschel, ehkki
+                algselt arvas ta, et tegemist on komeedi või tähega. Uraani olemus kinnitati 1783. aastal.
+                <br><br>
+                Diameeter: 50724 km
+                <br><br>
+                Päeva pikkus: 17 h 14 min
+                <br><br>
+                Aasta pikkus: 84 aastat
+                <br><br>
+                Atmosfäär: –
+                <br><br>
+                Temperatuur: ~-224,2 °C
+                <br><br>
+                Tüüp: gaasiplaneet
+                <br><br>
+                Kaaslasi: 27
+                <br><br>
+                Kaugus Päikesest: ~2 900 000 000 km (19.8 aü)
+                <br><br>
+                Vaadeldav: jah, palja silmaga.
+                <br><br>
+                Külastanud tehiskaaslasi: 1
+                <br><br>
+                Aktiivseid tehiskaaslasi: 0
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="planet_data row">
+        <div class="col-md-6">
+            <img src="../static/img/Neptune.jpg" alt="planet neptune" width="600"
+                 height="600" th:src="@{img/Neptune.jpg}"/>
+        </div>
+
+        <div class="col-md-6">
+            <h4>Neptuun</h4>
+            <div>
+                Pime, külm ja ülehelikiirusel puhuvate tuultega jäähiiglane Neptuun on meie Päikesesüsteemi kaheksas ja
+                kaugeim planeet.
+
+                Enam kui 30 korda Päikesest kaugemal kui Maa on Neptuun ainus meie päikesesüsteemi planeet, mis pole
+                palja silmaga nähtav ja mille olemasolu ennustas matemaatika enne selle avastamist. 2011. aastal lõpetas
+                Neptuun esimese 165-aastase orbiidi pärast selle avastamist 1846. aastal
+                <br><br>
+                Diameeter: 49244 km
+                <br><br>
+                Päeva pikkus: 16 h
+                <br><br>
+                Aasta pikkus: 165 aastat
+                <br><br>
+                Atmosfäär: –
+                <br><br>
+                Temperatuur: -235 °C
+                <br><br>
+                Tüüp: gaasiplaneet
+                <br><br>
+                Kaaslasi: 1
+                <br><br>
+                Kaugus Päikesest: ~4 500 000 000 km (30 aü)
+                <br><br>
+                Vaadeldav: ei ole palja silmaga vaadeldav.
+                <br><br>
+                Külastanud tehiskaaslasi: 1
+                <br><br>
+                Aktiivseid tehiskaaslasi: 0
+            </div>
+        </div>
+    </div>
+    <p>Tekstid: NASA SSE<br>Pildid: NASA, Wikimedia Commons</p>
+</div>
+</body>
+</html>
