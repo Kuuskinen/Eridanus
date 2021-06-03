@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Avaleht</title>
+    <link rel="stylesheet" href="/css/general_style.css" th:href="@{/css/general_style.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
 </nav>
 
 <!-- PAGE STUFF -->
-<form class="form" action="#" th:action="@{/}" th:object="${observationDTO}" method="post">
+<form class="form main" action="#" th:action="@{/}" th:object="${observationDTO}" method="post">
     <div class="form-group">
         <label for="observationDate" th:text="#{observation.date}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
@@ -78,7 +79,7 @@
              th:errors="*{observationDetails}"></div>
     </div>
 
-    <input type="submit"  class="btn btn-success" value="add observation">
+    <input type="submit"  class="btn btn-success" value="Save">
 </form>
 
 </body>

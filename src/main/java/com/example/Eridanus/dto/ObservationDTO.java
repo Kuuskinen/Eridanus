@@ -11,21 +11,20 @@ import java.time.LocalTime;
 
 public class ObservationDTO {
 
-    @NotEmpty
+    @NotEmpty(message = "{empty.error}")
     @DateTimeFormat(pattern="yyyy-MM-dd")
     String observationDate;
 
-    @NotEmpty
-    @Size(min = 5, message = "{empty.error}")
+    @NotEmpty(message = "{empty.error}")
     String observationMethod;
 
-    @NotEmpty
+    @NotEmpty(message = "{empty.error}")
     String observationTarget;
 
-    @NotNull
+    @NotNull(message = "{empty.error}")
     LocalTime observationStart;
 
-    @NotNull
+    @NotNull(message = "{empty.error}")
     LocalTime observationEnd;
 
     String observationDetails;

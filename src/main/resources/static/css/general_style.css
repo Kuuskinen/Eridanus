@@ -6,16 +6,9 @@
     padding-top: 15px;
 }
 
-
-.planet_data_1 {
-    float: left;
-    padding-left: 10px;
-}
-
-.planet_data_2 {
-    float: right;
-    overflow:auto;
-    width:750px;
+.main {
+    max-width: 500px;
+    margin: auto;
 }
 
 
