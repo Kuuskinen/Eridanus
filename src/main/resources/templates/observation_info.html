@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Vaatlused</title>
+    <link rel="stylesheet" href="/css/general_style.css" th:href="@{/css/general_style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/" th:text="#{main.name}"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Avaleht</a></li>
+            <li><a href="/planets" th:text="#{planets}"></a></li>
+            <li><a href="/observation_info" class="active" th:text="#{observations}"></a></li>
+            <li><a href="/">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+<h3 th:text="#{observations}" class="center"></h3>
+<div class="data_table container">
+    <div class="data_header row">
+        <div class="col-md-2"><p th:text="#{observation.date}"></p></div>
+        <div class="col-md-2"><p th:text="#{observation.method}"></p></div>
+        <div class="col-md-2"><p th:text="#{observation.target}"></p></div>
+        <div class="col-md-2"><p th:text="#{observation.start}"></p></div>
+        <div class="col-md-2"><p th:text="#{observation.end}"></p></div>
+        <div class="col-md-2"><p th:text="#{observation.details}"></p></div>
+    </div>
+    <div class="row" th:if="${observations == null or observations.isEmpty()}">
+        <div class="col-md-12"><span th:text="#{observation.none}"></span></div>
+    </div>
+    <div class="data_tr row" th:each="observation : ${observations}">
+        <div class="col-md-2"><span th:text="${observation.observationDate}"></span></div>
+        <div class="col-md-2"><span th:text="${observation.observationMethod}"></span></div>
+        <div class="col-md-2"><span th:text="${observation.observationTarget}"></span></div>
+        <div class="col-md-2"><span th:text="${observation.observationStart}"></span></div>
+        <div class="col-md-2"><span th:text="${observation.observationEnd}"></span></div>
+        <div class="col-md-2"><span th:text="${observation.observationDetails}"></span></div>
+    </div>
+</div>
+</body>
+
+</html>

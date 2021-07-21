@@ -1,3 +1,9 @@
+.center {
+    text-align: center;
+}
+
+/*PLANETS*/
+
 .planet_page_general {
     padding-left: 15px;
 }
@@ -11,5 +17,25 @@
     margin: auto;
 }
 
+/*Observations CSS*/
 
+.data_table {
+    max-width: 700px;
+}
 
+.data_header {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.data_tr {
+    border: 1px solid darkgrey;
+    padding: 6px;
+}
+
+/*ERROR*/
+
+.center_error {
+    justify-content: center;
+    display: flex;
+}
