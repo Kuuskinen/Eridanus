@@ -19,67 +19,77 @@
     </div>
 </nav>
 
-<!-- PAGE STUFF -->
 <form class="form main" action="#" th:action="@{/}" th:object="${observationDTO}" method="post">
+
+    <!-- OBSERVATION START -->
     <div class="form-group">
-        <label for="observationDate" th:text="#{observation.date}"></label>
+        <label for="obsStartDate" th:text="#{observation.start.date}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="date" th:field="*{observationDate}" id="observationDate" placeholder="observation date">
+        <input class="form-control" type="date" th:field="*{obsStartDate}" id="obsStartDate"
+               th:placeholder="#{observation.start.date}">
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationDate')}" th:errors="*{observationDate}"></div>
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsStartDate')}" th:errors="*{obsStartDate}"></div>
+    </div>
+    <div class="form-group">
+        <label for="obsStartTime" th:text="#{observation.start.time}"></label>
+        <!--suppress ThymeleafVariablesResolveInspection -->
+        <input class="form-control" type="time" th:field="*{obsStartTime}" id="obsStartTime"
+               th:placeholder="#{observation.start.time}">
+        <!--suppress ThymeleafVariablesResolveInspection -->
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsStartTime')}" th:errors="*{obsStartTime}"></div>
     </div>
 
+    <!-- OBSERVATION END -->
     <div class="form-group">
-        <label for="observationMethod" th:text="#{observation.method}"></label>
+        <label for="obsEndDate" th:text="#{observation.end.date}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="text" th:field="*{observationMethod}" id="observationMethod"
-               placeholder="observation method">
+        <input class="form-control" type="date" th:field="*{obsEndDate}" id="obsEndDate"
+               th:placeholder="#{observation.end.date}">
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationMethod')}"
-             th:errors="*{observationMethod}"></div>
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsEndDate')}" th:errors="*{obsEndDate}"></div>
+    </div>
+    <div class="form-group">
+        <label for="obsEndTime" th:text="#{observation.end.time}"></label>
+        <!--suppress ThymeleafVariablesResolveInspection -->
+        <input class="form-control" type="time" th:field="*{obsEndTime}" id="obsEndTime"
+               th:placeholder="#{observation.end.time}">
+        <!--suppress ThymeleafVariablesResolveInspection -->
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsEndTime')}" th:errors="*{obsEndTime}"></div>
     </div>
 
+    <!-- OBSERVATION TARGET -->
     <div class="form-group">
-        <label for="observationMethod" th:text="#{observation.target}"></label>
+        <label for="obsTarget" th:text="#{observation.target}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="text" th:field="*{observationTarget}" id="observationTarget"
-               placeholder="observation target">
+        <input class="form-control" type="text" th:field="*{obsTarget}" id="obsTarget"
+               placeholder="observation method" th:placeholder="#{observation.target}">
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationTarget')}"
-             th:errors="*{observationTarget}"></div>
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsTarget')}"
+             th:errors="*{obsTarget}"></div>
     </div>
 
+    <!-- OBSERVATION METHOD -->
     <div class="form-group">
-        <label for="observationStart" th:text="#{observation.start}"></label>
+        <label for="obsMethod" th:text="#{observation.method}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="time" th:field="*{observationStart}" id="observationStart"
-               placeholder="observation start">
+        <input class="form-control" type="text" th:field="*{obsMethod}" id="obsMethod"
+               th:placeholder="#{observation.method}">
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationStart')}"
-             th:errors="*{observationStart}"></div>
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsMethod')}"
+             th:errors="*{obsMethod}"></div>
     </div>
 
+    <!-- OBSERVATION DETAILS -->
     <div class="form-group">
-        <label for="observationEnd" th:text="#{observation.end}"></label>
+        <label for="obsDetails" th:text="#{observation.details}"></label>
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="time" th:field="*{observationEnd}" id="observationEnd"
-               placeholder="observation end">
+        <input class="form-control" type="text" th:field="*{obsDetails}" id="obsDetails"
+               th:placeholder="#{observation.details}">
         <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationEnd')}"
-             th:errors="*{observationEnd}"></div>
+        <div class="alert alert-warning" th:if="${#fields.hasErrors('obsDetails')}"
+             th:errors="*{obsDetails}"></div>
     </div>
-
-    <div class="form-group">
-        <label for="observationDetails" th:text="#{observation.details}"></label>
-        <!--suppress ThymeleafVariablesResolveInspection -->
-        <input class="form-control" type="text" th:field="*{observationDetails}" id="observationDetails"
-               placeholder="observation details">
-        <!--suppress ThymeleafVariablesResolveInspection -->
-        <div class="alert alert-warning" th:if="${#fields.hasErrors('observationDetails')}"
-             th:errors="*{observationDetails}"></div>
-    </div>
-
-    <input type="submit"  class="btn btn-success" value="Save">
+    <button type="submit" th:text="#{save.button}" class="btn btn-success"></button>
 </form>
 
 </body>

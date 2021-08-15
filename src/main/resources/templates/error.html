@@ -1,7 +1,64 @@
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title th:text="#{error.general}"></title>
+  <link rel="stylesheet" href="/css/general_style.css" th:ref="@{/css/general_style.css}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
 <body>
-  <h1>Something went wrong!</h1>
-  <h2>Our Engineers are on it</h2>
-  <a href="/" th:text="#{index.page}"></a>
+  <div class="container">
+    <div>
+      <h1 th:text="#{error.general}" class="center_error"></h1>
+      <h2 th:text="#{error.general.message}" class="center_error"></h2>
+      <div class="error_return_btn">
+        <button type="button" onclick="location.href='/';" th:text="#{index.page}" class="btn btn-primary"></button>
+      </div>
+    </div>
+
+    <!--1/4-->
+    <div class="col-md-3">
+      <img src="../static/img/image_Maiken.jpg" alt="portrait of Maiken" width="250"
+           height="300" th:src="@{img/image_Maiken.jpg}"/>
+      <div class="error_vote">
+        <button type="button" onclick="location.href='/';" class="error_vote_btn btn btn-info"
+                th:text="#{error.general.worker1}" style="font-weight: bold"></button>
+      </div>
+    </div>
+
+    <!--2/4-->
+    <div class="col-md-3">
+      <img src="../static/img/image_Indrek.jpg" alt="planet mercury" width="250"
+           height="300" th:src="@{img/image_Indrek.jpg}"/>
+      <div class="error_vote">
+        <button type="button" onclick="location.href='/';" class="btn btn-info"
+                th:text="#{error.general.worker2}" style="font-weight: bold"></button>
+      </div>
+    </div>
+
+    <!--3/4-->
+    <div class="col-md-3">
+      <img src="../static/img/image_Pille.jpg" alt="planet mercury" width="250"
+           height="300" th:src="@{img/image_Pille.jpg}"/>
+      <div class="error_vote">
+        <button type="button" onclick="location.href='/';" class="btn btn-info"
+                th:text="#{error.general.worker3}" style="font-weight: bold"></button>
+      </div>
+    </div>
+
+    <!--4/4-->
+    <div class="col-md-3">
+      <img src="../static/img/image_Mart.jpg" alt="planet mercury" width="250"
+           height="300" th:src="@{img/image_Mart.jpg}"/>
+      <div class="error_vote">
+        <button type="button" onclick="location.href='/';" class="error_vote_btn btn btn-info"
+                th:text="#{error.general.worker4}" style="font-weight: bold"></button>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <h5>Idee vealehe jaoks: Reddit (r/ProgrammerHumor/comments/8rik7h/best_404_page/)</h5>
+      <h5>Fotod: thispersondoesnotexist.com</h5>
+    </div>
+  </div>
 </body>
 </html>

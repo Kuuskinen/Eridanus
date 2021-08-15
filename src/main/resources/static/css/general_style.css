@@ -39,3 +39,23 @@
     justify-content: center;
     display: flex;
 }
+
+.error_vote {
+    padding-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.error_references {
+    padding-top: 70px;
+}
+
+button {
+    font-weight: bold;
+}
+
+.error_return_btn {
+    padding-bottom: 10px;
+    justify-content: center;
+    display: flex;
+}

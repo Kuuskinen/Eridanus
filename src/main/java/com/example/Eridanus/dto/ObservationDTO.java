@@ -8,26 +8,27 @@ import javax.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
 @Data
 public class ObservationDTO {
 
-    //@NotEmpty(message = "{empty.error}")
     @DateTimeFormat(pattern="yyyy-MM-dd")
-    LocalDate observationDate;
-
-    @NotEmpty(message = "{empty.error}")
-    String observationMethod;
-
-    @NotEmpty(message = "{empty.error}")
-    String observationTarget;
+    LocalDate obsStartDate;
 
     @NotNull(message = "{empty.error}")
-    LocalTime observationStart;
+    LocalTime obsStartTime;
+
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    LocalDate obsEndDate;
 
     @NotNull(message = "{empty.error}")
-    LocalTime observationEnd;
+    LocalTime obsEndTime;
 
-    String observationDetails;
+    @NotEmpty(message = "{empty.error}")
+    String obsMethod;
+
+    @NotEmpty(message = "{empty.error}")
+    String obsTarget;
+
+    String obsDetails;
 }

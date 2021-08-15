@@ -1,16 +1,14 @@
 package com.example.Eridanus.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.Date;
+import java.util.Objects;
 
 @Entity
-@Table(name = "observations")
+@Table(name = "main_observations")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,20 +19,17 @@ public class ObservationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "observation_date", nullable = false)
-    private LocalDate observationDate;
+    @Column(name = "observation_start", nullable = false)
+    private Date observationStart;
 
-    @Column(name = "observation_method", nullable = false)
-    private String observationMethod;
+    @Column(name = "observation_end", nullable = false)
+    private Date observationEnd;
 
     @Column(name = "observation_target", nullable = false)
     private String observationTarget;
 
-    @Column(name = "observation_start", nullable = false)
-    private LocalTime observationStart;
-
-    @Column(name = "observation_end", nullable = false)
-    private LocalTime observationEnd;
+    @Column(name = "observation_method", nullable = false)
+    private String observationMethod;
 
     @Column(name = "observation_details")
     private String observationDetails;
